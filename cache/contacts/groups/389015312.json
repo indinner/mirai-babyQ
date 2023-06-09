@@ -1,0 +1,77 @@
+{
+    "troopMemberNumSeq": 92,
+    "list": [
+        {
+            "uin": 520244,
+            "nick": "阳光开朗大男孩",
+            "permission": "OWNER",
+            "remark": "阳光开朗大男孩",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1686203213,
+            "lastSpeakTimestamp": 1686210150,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 3
+        },
+        {
+            "uin": 1244018263,
+            "nick": "babyQ",
+            "permission": "ADMINISTRATOR",
+            "remark": "babyQ",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1686203213,
+            "lastSpeakTimestamp": 1686214641,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 2
+        },
+        {
+            "uin": 2270781775,
+            "nick": "$",
+            "permission": "MEMBER",
+            "remark": "$",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1686207639,
+            "lastSpeakTimestamp": 1686210170,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 2
+        },
+        {
+            "uin": 3239535236,
+            "nick": "crazy",
+            "permission": "MEMBER",
+            "remark": "crazy",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1686218135,
+            "lastSpeakTimestamp": 1686218164,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 2
+        }
+    ]
+}
