@@ -1,5 +1,5 @@
 {
-    "troopMemberNumSeq": 22505,
+    "troopMemberNumSeq": 22506,
     "list": [
         {
             "uin": 2969925,
@@ -680,7 +680,7 @@
             "lastSpeakTimestamp": 1618396079,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 787,
+            "point": 792,
             "honors": [
             ],
             "temperature": 86
@@ -1001,10 +1001,10 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1458230373,
-            "lastSpeakTimestamp": 1686119038,
+            "lastSpeakTimestamp": 1686220964,
             "isOfficialBot": false,
             "rank": 6,
-            "point": 6142,
+            "point": 6135,
             "honors": [
             ],
             "temperature": 100
@@ -1220,7 +1220,7 @@
             "lastSpeakTimestamp": 1684334696,
             "isOfficialBot": false,
             "rank": 5,
-            "point": 1403,
+            "point": 1408,
             "honors": [
             ],
             "temperature": 100
@@ -1580,7 +1580,7 @@
             "lastSpeakTimestamp": 1685008980,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 1320,
+            "point": 1315,
             "honors": [
             ],
             "temperature": 100
@@ -2984,7 +2984,7 @@
             "lastSpeakTimestamp": 1682850162,
             "isOfficialBot": false,
             "rank": 3,
-            "point": 416,
+            "point": 411,
             "honors": [
             ],
             "temperature": 85
@@ -3737,10 +3737,10 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1613230643,
-            "lastSpeakTimestamp": 1685712049,
+            "lastSpeakTimestamp": 1686287684,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 713,
+            "point": 702,
             "honors": [
             ],
             "temperature": 100
@@ -5270,7 +5270,7 @@
             "lastSpeakTimestamp": 1676717260,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 615,
+            "point": 620,
             "honors": [
             ],
             "temperature": 87
@@ -8060,7 +8060,7 @@
             "lastSpeakTimestamp": 1674396297,
             "isOfficialBot": false,
             "rank": 3,
-            "point": 12,
+            "point": 9,
             "honors": [
             ],
             "temperature": 35
@@ -8096,7 +8096,7 @@
             "lastSpeakTimestamp": 1664533508,
             "isOfficialBot": false,
             "rank": 3,
-            "point": 147,
+            "point": 152,
             "honors": [
             ],
             "temperature": 64
@@ -8456,7 +8456,7 @@
             "lastSpeakTimestamp": 1683293249,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 999,
+            "point": 994,
             "honors": [
             ],
             "temperature": 94
@@ -9443,7 +9443,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1597947132,
-            "lastSpeakTimestamp": 1685977545,
+            "lastSpeakTimestamp": 1686288823,
             "isOfficialBot": false,
             "rank": 5,
             "point": 1384,
@@ -9554,7 +9554,7 @@
             "lastSpeakTimestamp": 1686010925,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 718,
+            "point": 707,
             "honors": [
             ],
             "temperature": 100
@@ -9842,7 +9842,7 @@
             "lastSpeakTimestamp": 1685009928,
             "isOfficialBot": false,
             "rank": 5,
-            "point": 1391,
+            "point": 1384,
             "honors": [
             ],
             "temperature": 100
@@ -11732,7 +11732,7 @@
             "lastSpeakTimestamp": 1671417341,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 577,
+            "point": 573,
             "honors": [
             ],
             "temperature": 96
@@ -13835,7 +13835,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1640052603,
-            "lastSpeakTimestamp": 1686195635,
+            "lastSpeakTimestamp": 1686238201,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -14414,7 +14414,7 @@
             "lastSpeakTimestamp": 1671452763,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 787,
+            "point": 792,
             "honors": [
             ],
             "temperature": 87
@@ -15887,10 +15887,10 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1620463538,
-            "lastSpeakTimestamp": 1686013916,
+            "lastSpeakTimestamp": 1686288790,
             "isOfficialBot": false,
             "rank": 3,
-            "point": 183,
+            "point": 175,
             "honors": [
             ],
             "temperature": 100
@@ -16958,24 +16958,6 @@
             "temperature": 0
         },
         {
-            "uin": 3037054585,
-            "nick": "熬呗",
-            "permission": "MEMBER",
-            "remark": "熬呗",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1685177679,
-            "lastSpeakTimestamp": 1685934220,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 2
-        },
-        {
             "uin": 3038884806,
             "nick": "。",
             "permission": "MEMBER",
@@ -17761,8 +17743,8 @@
             "joinTimestamp": 1567843955,
             "lastSpeakTimestamp": 1651450993,
             "isOfficialBot": false,
-            "rank": 2,
-            "point": 3,
+            "rank": 1,
+            "point": 0,
             "honors": [
             ],
             "temperature": 5
@@ -19415,10 +19397,10 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1603876641,
-            "lastSpeakTimestamp": 1686033435,
+            "lastSpeakTimestamp": 1686288718,
             "isOfficialBot": false,
             "rank": 4,
-            "point": 868,
+            "point": 864,
             "honors": [
             ],
             "temperature": 100
@@ -19479,9 +19461,9 @@
         },
         {
             "uin": 3413954899,
-            "nick": "梦马远方",
+            "nick": "菜鸟驿站",
             "permission": "MEMBER",
-            "remark": "梦马远方",
+            "remark": "菜鸟驿站",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,

@@ -29,5 +29,11 @@ public class GroupSetting {
     @ApiModelProperty(value = "是否开启关键词撤回")
     private Boolean keyword=false;
 
+    @ApiModelProperty(value = "是否开启加群验证")
+    private Boolean joinKey=false;
+
+    @ApiModelProperty(value = "加群验证的答案")
+    private String joinAnswer;
+
 
 }

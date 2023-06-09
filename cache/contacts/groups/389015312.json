@@ -1,5 +1,5 @@
 {
-    "troopMemberNumSeq": 92,
+    "troopMemberNumSeq": 114,
     "list": [
         {
             "uin": 520244,
@@ -11,13 +11,14 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1686203213,
-            "lastSpeakTimestamp": 1686210150,
+            "lastSpeakTimestamp": 1686320775,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
+                1
             ],
-            "temperature": 3
+            "temperature": 5
         },
         {
             "uin": 1244018263,
@@ -29,13 +30,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1686203213,
-            "lastSpeakTimestamp": 1686214641,
+            "lastSpeakTimestamp": 1686316881,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 2
+            "temperature": 3
         },
         {
             "uin": 2270781775,
@@ -46,8 +47,8 @@
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
-            "joinTimestamp": 1686207639,
-            "lastSpeakTimestamp": 1686210170,
+            "joinTimestamp": 1686321247,
+            "lastSpeakTimestamp": 1686321261,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -64,14 +65,14 @@
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
-            "joinTimestamp": 1686218135,
-            "lastSpeakTimestamp": 1686218164,
+            "joinTimestamp": 1686320570,
+            "lastSpeakTimestamp": 1686320570,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 2
+            "temperature": 0
         }
     ]
 }

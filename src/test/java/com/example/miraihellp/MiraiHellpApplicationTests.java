@@ -1,5 +1,6 @@
 package com.example.miraihellp;
 
+import com.example.miraihellp.entity.BlackList;
 import com.example.miraihellp.entity.GroupSetting;
 import com.example.miraihellp.entity.KeyWord;
 import jakarta.annotation.Resource;
@@ -21,11 +22,14 @@ class MiraiHellpApplicationTests {
     /**
      * 添加群设置
      */
+    @Test
     void addGroupSetting(){
         GroupSetting groupSetting=new GroupSetting();
-        groupSetting.setID(389015312L);
-        groupSetting.setTwoClass(true);
+        groupSetting.setID(163962686L);
+        groupSetting.setTwoClass(false);
         groupSetting.setKeyword(true);
+        groupSetting.setJoinKey(false);
+        groupSetting.setJoinAnswer("null");
         mongoTemplate.save(groupSetting);
     }
 
@@ -37,6 +41,15 @@ class MiraiHellpApplicationTests {
         keyWord.setContent("勤工俭学");
         keyWord.setState(0);
         mongoTemplate.save(keyWord);
+    }
+
+    /**
+     * 设置黑名单
+     */
+    void addBlackList(){
+        BlackList blackList=new BlackList();
+        blackList.setQQ(11111L);
+        mongoTemplate.save(blackList);
     }
 
 }
