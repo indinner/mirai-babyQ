@@ -6,6 +6,7 @@ import com.example.miraihellp.entity.KeyWord;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
 import com.example.miraihellp.service.SensitiveWordsFilter;
+import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
 import net.mamoe.mirai.contact.Member;
@@ -55,9 +56,6 @@ public class GroupEventHandlers extends SimpleListenerHost {
             //如果开启了加群验证，判断用户发送的验证信息是否正确
             int lastColonIndex = event.getMessage().lastIndexOf("：");
             String answer=event.getMessage().substring(lastColonIndex + 1);
-            log.info("=======");
-            log.info("用户验证信息:{}",answer);
-            log.info("=======");
             if(GroupServerCatch.groupSettingMap.get(event.getGroupId()).getJoinAnswer().equals(answer)){
                 //答案正确
                 event.accept();

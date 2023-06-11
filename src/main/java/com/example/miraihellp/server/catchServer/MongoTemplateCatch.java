@@ -1,10 +1,12 @@
 package com.example.miraihellp.server.catchServer;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.Resource;
+
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
 
 /**
  * @Author indinner

@@ -2,8 +2,8 @@ package com.example.miraihellp.server.catchServer;
 
 import com.example.miraihellp.entity.GroupSetting;
 import com.example.miraihellp.server.mirai.MiraiServer;
+
 import jakarta.annotation.PostConstruct;
-import jakarta.annotation.Resource;
 import net.mamoe.mirai.Bot;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
