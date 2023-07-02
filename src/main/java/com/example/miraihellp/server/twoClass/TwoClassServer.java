@@ -27,8 +27,8 @@ import java.util.Date;
  * @Version 1.0
  * @Doc:第二课堂相关服务
  */
-@Service
-@EnableScheduling
+/*@Service
+@EnableScheduling*/
 @Log4j2
 public class TwoClassServer {
 

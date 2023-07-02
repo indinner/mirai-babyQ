@@ -28,7 +28,7 @@ public class MiraiServer {
             fileBasedDeviceInfo(); // 使用 device.json 存储设备信息
             setProtocol(MiraiProtocol.ANDROID_WATCH); // 切换协议
         }});
-        bot.getConfiguration().enableContactCache();//开启列表缓存，正式上线建议关闭
+        //bot.getConfiguration().enableContactCache();//开启列表缓存，正式上线建议关闭
         bot.login();
         MiraiServer.afterLogin(bot);
         return bot;

@@ -1,23 +1,53 @@
 {
-    "friendListSeq": 317,
-    "timeStamp": 100,
+    "friendListSeq": 2364,
+    "timeStamp": 625,
     "list": [
         {
             "uin": 520244,
-            "nick": "阳光开朗大男孩",
-            "remark": "阳光开朗大男孩",
+            "nick": "余味",
+            "remark": "错踢请联系我拉回",
             "friendGroupId": 0
         },
         {
             "uin": 2411441,
-            "nick": "墙姐(滨湖)",
-            "remark": "墙姐(滨湖)",
+            "nick": "合师墙姐(滨湖)",
+            "remark": "合师墙姐(滨湖)",
             "friendGroupId": 0
         },
         {
-            "uin": 66600000,
-            "nick": "babyQ",
-            "remark": "babyQ",
+            "uin": 8000919,
+            "nick": "8000919",
+            "remark": "8000919",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 209131542,
+            "nick": "A.",
+            "remark": "A.",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 475276495,
+            "nick": "Fighting",
+            "remark": "Fighting",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 507525340,
+            "nick": "青柠",
+            "remark": "青柠",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 517310215,
+            "nick": "jojo",
+            "remark": "[九九爱刷牙ʕ ᵔᴥᵔ ʔ]",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 547129118,
+            "nick": "-",
+            "remark": "-",
             "friendGroupId": 0
         },
         {
@@ -27,33 +57,93 @@
             "friendGroupId": 0
         },
         {
-            "uin": 1244018263,
-            "nick": "babyQ",
-            "remark": "babyQ",
+            "uin": 964492235,
+            "nick": "昵称",
+            "remark": "昵称",
             "friendGroupId": 0
         },
         {
-            "uin": 1653011838,
-            "nick": "Cure...",
-            "remark": "Cure...",
+            "uin": 1126137095,
+            "nick": "ぉ",
+            "remark": "ぉ",
             "friendGroupId": 0
         },
         {
-            "uin": 2046800434,
-            "nick": "青年晚报",
-            "remark": "青年晚报",
+            "uin": 1355495062,
+            "nick": "cherry 🍒",
+            "remark": "cherry",
             "friendGroupId": 0
         },
         {
-            "uin": 2577218973,
-            "nick": "-勇",
-            "remark": "AAA需要钱的女生私聊",
+            "uin": 1416484514,
+            "nick": "小熊饼干",
+            "remark": "小熊饼干",
             "friendGroupId": 0
         },
         {
-            "uin": 2656328343,
-            "nick": "雨还在下~",
-            "remark": "雨还在下~",
+            "uin": 1660780218,
+            "nick": "太阳鱼",
+            "remark": "太阳鱼",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 1953514483,
+            "nick": "缓缓",
+            "remark": "缓缓",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 1985427734,
+            "nick": "风云",
+            "remark": "风云",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2045683096,
+            "nick": "妮妮",
+            "remark": "妮妮",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2115350545,
+            "nick": "泛滥余罪",
+            "remark": "泛滥余罪",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2210035058,
+            "nick": "布隆.",
+            "remark": "布隆.",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2286587898,
+            "nick": "氢贰氧壹.",
+            "remark": "氢贰氧壹.",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2375551317,
+            "nick": "月亮的祷告",
+            "remark": "月亮的祷告",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2455167573,
+            "nick": "🍿",
+            "remark": "🍿",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2592388330,
+            "nick": "听若写浪漫",
+            "remark": "听若写浪漫",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 2776702886,
+            "nick": "阿里嘎多美羊羊桑",
+            "remark": "阿里嘎多美羊羊桑",
             "friendGroupId": 0
         },
         {
@@ -63,21 +153,63 @@
             "friendGroupId": 0
         },
         {
-            "uin": 3158299190,
-            "nick": "超星",
-            "remark": "超星",
+            "uin": 2830805687,
+            "nick": "啊张",
+            "remark": "啊张",
             "friendGroupId": 0
         },
         {
-            "uin": 3361273889,
-            "nick": "彭🐟晏",
-            "remark": "彭🐟晏",
+            "uin": 2936107910,
+            "nick": "cxr",
+            "remark": "代课",
             "friendGroupId": 0
         },
         {
-            "uin": 3462844410,
-            "nick": "Breeze",
-            "remark": "Breeze",
+            "uin": 3094893439,
+            "nick": "长风",
+            "remark": "长风",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 3160276948,
+            "nick": "leap.  frog.",
+            "remark": "leap.  frog.",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 3239535236,
+            "nick": "AbabyQ",
+            "remark": "AbabyQ",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 3438949594,
+            "nick": "oneself",
+            "remark": "oneself",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 3440115132,
+            "nick": "是我们",
+            "remark": "2",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 3451337671,
+            "nick": "幼儿园一哥",
+            "remark": "幼儿园一哥",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 3474564697,
+            "nick": "网课工作室",
+            "remark": "网课工作室",
+            "friendGroupId": 0
+        },
+        {
+            "uin": 3607730283,
+            "nick": "致哈斯！",
+            "remark": "3a6楼",
             "friendGroupId": 0
         }
     ]

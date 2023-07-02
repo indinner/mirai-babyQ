@@ -1,11 +1,11 @@
 {
-    "troopMemberNumSeq": 22506,
+    "troopMemberNumSeq": 22536,
     "list": [
         {
             "uin": 2969925,
-            "nick": "阿宝—网课论文客服",
+            "nick": "阿宝—论文客服",
             "permission": "MEMBER",
-            "remark": "阿宝—网课论文客服",
+            "remark": "阿宝—论文客服",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -191,7 +191,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1646193434,
-            "lastSpeakTimestamp": 1680921155,
+            "lastSpeakTimestamp": 1687241727,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -731,13 +731,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1447815522,
-            "lastSpeakTimestamp": 1663238377,
+            "lastSpeakTimestamp": 1686485849,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 11
+            "temperature": 12
         },
         {
             "uin": 308124617,
@@ -803,7 +803,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1604641662,
-            "lastSpeakTimestamp": 1681636934,
+            "lastSpeakTimestamp": 1686803759,
             "isOfficialBot": false,
             "rank": 3,
             "point": 130,
@@ -888,18 +888,18 @@
             "nick": "白明星(初文写作工作室).",
             "permission": "MEMBER",
             "remark": "",
-            "nameCard": "AAA18届安城老学长代写论文。人在合肥",
+            "nameCard": "A学长代写论文。工作室在光明之家。包售后",
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1662965635,
-            "lastSpeakTimestamp": 1685953451,
+            "lastSpeakTimestamp": 1688188565,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 49
+            "temperature": 53
         },
         {
             "uin": 344238573,
@@ -1001,7 +1001,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1458230373,
-            "lastSpeakTimestamp": 1686220964,
+            "lastSpeakTimestamp": 1688196512,
             "isOfficialBot": false,
             "rank": 6,
             "point": 6135,
@@ -1047,7 +1047,7 @@
         },
         {
             "uin": 375333257,
-            "nick": "晚安航子",
+            "nick": "Azhang",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "安城孕动员",
@@ -1181,13 +1181,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1586923137,
-            "lastSpeakTimestamp": 1661178571,
+            "lastSpeakTimestamp": 1687700669,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 3
+            "temperature": 5
         },
         {
             "uin": 417626570,
@@ -1253,13 +1253,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1645757559,
-            "lastSpeakTimestamp": 1684395543,
+            "lastSpeakTimestamp": 1687382105,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 28
+            "temperature": 29
         },
         {
             "uin": 445844412,
@@ -1523,13 +1523,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1646308983,
-            "lastSpeakTimestamp": 1684981584,
+            "lastSpeakTimestamp": 1686986198,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 31
+            "temperature": 32
         },
         {
             "uin": 503859404,
@@ -1577,7 +1577,7 @@
             "muteTimestamp": 1614157476,
             "anonymousId": null,
             "joinTimestamp": 1585717961,
-            "lastSpeakTimestamp": 1685008980,
+            "lastSpeakTimestamp": 1687437951,
             "isOfficialBot": false,
             "rank": 4,
             "point": 1315,
@@ -2405,13 +2405,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1546232849,
-            "lastSpeakTimestamp": 1678942839,
+            "lastSpeakTimestamp": 1687073616,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 13
+            "temperature": 14
         },
         {
             "uin": 781080610,
@@ -2513,13 +2513,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1647509623,
-            "lastSpeakTimestamp": 1684402555,
+            "lastSpeakTimestamp": 1688276738,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 93
+            "temperature": 95
         },
         {
             "uin": 799265824,
@@ -2756,6 +2756,24 @@
             "temperature": 0
         },
         {
+            "uin": 859336774,
+            "nick": "Estrella",
+            "permission": "MEMBER",
+            "remark": "Estrella",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1688222828,
+            "lastSpeakTimestamp": 1688222828,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 0
+        },
+        {
             "uin": 860785420,
             "nick": "小七哥ෆ⃛",
             "permission": "MEMBER",
@@ -2847,9 +2865,9 @@
         },
         {
             "uin": 864408011,
-            "nick": "奇点。",
+            "nick": "奇点",
             "permission": "MEMBER",
-            "remark": "奇点。",
+            "remark": "奇点",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -2891,13 +2909,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1659065615,
-            "lastSpeakTimestamp": 1685870693,
+            "lastSpeakTimestamp": 1686636918,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 25
+            "temperature": 26
         },
         {
             "uin": 865640497,
@@ -3063,9 +3081,9 @@
         },
         {
             "uin": 904625652,
-            "nick": "星辰生花",
+            "nick": "做自己就好",
             "permission": "MEMBER",
-            "remark": "星辰生花",
+            "remark": "做自己就好",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -3512,6 +3530,24 @@
             "temperature": 0
         },
         {
+            "uin": 973504732,
+            "nick": "成熟的身心疲惫",
+            "permission": "MEMBER",
+            "remark": "成熟的身心疲惫",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1687329205,
+            "lastSpeakTimestamp": 1687329205,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 0
+        },
+        {
             "uin": 974766325,
             "nick": "故渊",
             "permission": "MEMBER",
@@ -3737,7 +3773,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1613230643,
-            "lastSpeakTimestamp": 1686287684,
+            "lastSpeakTimestamp": 1687879254,
             "isOfficialBot": false,
             "rank": 4,
             "point": 702,
@@ -3809,13 +3845,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1653362203,
-            "lastSpeakTimestamp": 1685468502,
+            "lastSpeakTimestamp": 1687742789,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 35
+            "temperature": 36
         },
         {
             "uin": 1044275452,
@@ -4025,13 +4061,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1651211793,
-            "lastSpeakTimestamp": 1678896545,
+            "lastSpeakTimestamp": 1686494455,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 4
+            "temperature": 5
         },
         {
             "uin": 1073882478,
@@ -4043,13 +4079,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1650690863,
-            "lastSpeakTimestamp": 1685943313,
+            "lastSpeakTimestamp": 1688003246,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 25
+            "temperature": 27
         },
         {
             "uin": 1084042515,
@@ -4143,9 +4179,9 @@
         },
         {
             "uin": 1104528745,
-            "nick": "翻斗花园小张",
+            "nick": "意难平",
             "permission": "MEMBER",
-            "remark": "翻斗花园小张",
+            "remark": "意难平",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -4349,13 +4385,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1644021631,
-            "lastSpeakTimestamp": 1684998867,
+            "lastSpeakTimestamp": 1688151246,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 21
+            "temperature": 22
         },
         {
             "uin": 1140790645,
@@ -4395,9 +4431,9 @@
         },
         {
             "uin": 1141424760,
-            "nick": "安城院帮帮酱",
+            "nick": ".",
             "permission": "MEMBER",
-            "remark": "安城院帮帮酱",
+            "remark": ".",
             "nameCard": "",
             "specialTitle": "帮帮酱",
             "muteTimestamp": 1600350774,
@@ -4557,7 +4593,7 @@
         },
         {
             "uin": 1183367941,
-            "nick": "dessing",
+            "nick": "芝士控",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "一代刷网课代写论文",
@@ -4565,7 +4601,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1642468334,
-            "lastSpeakTimestamp": 1649766969,
+            "lastSpeakTimestamp": 1686525031,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -4881,9 +4917,9 @@
         },
         {
             "uin": 1247245585,
-            "nick": "流年画卷",
+            "nick": "河畔的风",
             "permission": "MEMBER",
-            "remark": "流年画卷",
+            "remark": "河畔的风",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -4938,18 +4974,18 @@
             "nick": "很哇塞",
             "permission": "MEMBER",
             "remark": "",
-            "nameCard": "19财务",
+            "nameCard": "20财管",
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1590073480,
-            "lastSpeakTimestamp": 1598635606,
+            "lastSpeakTimestamp": 1687627799,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 2
+            "temperature": 3
         },
         {
             "uin": 1264207345,
@@ -5313,9 +5349,9 @@
         },
         {
             "uin": 1301539183,
-            "nick": "Aquí-小笨",
+            "nick": "Aquì 张板板",
             "permission": "MEMBER",
-            "remark": "Aquí-小笨",
+            "remark": "Aquì 张板板",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -5771,7 +5807,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1646621081,
-            "lastSpeakTimestamp": 1680183752,
+            "lastSpeakTimestamp": 1687924266,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -6437,13 +6473,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1656335862,
-            "lastSpeakTimestamp": 1675176573,
+            "lastSpeakTimestamp": 1686709547,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 13
+            "temperature": 15
         },
         {
             "uin": 1460582262,
@@ -6734,24 +6770,6 @@
             "temperature": 6
         },
         {
-            "uin": 1482251796,
-            "nick": "伍玖",
-            "permission": "MEMBER",
-            "remark": "伍玖",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1564983489,
-            "lastSpeakTimestamp": 1565094133,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 0
-        },
-        {
             "uin": 1482608030,
             "nick": "晨曦",
             "permission": "MEMBER",
@@ -6968,24 +6986,6 @@
             "temperature": 0
         },
         {
-            "uin": 1515730835,
-            "nick": "无名姓者（猫猫）",
-            "permission": "MEMBER",
-            "remark": "无名姓者（猫猫）",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1663052787,
-            "lastSpeakTimestamp": 1663052788,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 0
-        },
-        {
             "uin": 1517372453,
             "nick": "এ᭄𝑄𝑢𝑒𝑒𝑛ོꦿ࿐",
             "permission": "MEMBER",
@@ -7148,22 +7148,22 @@
             "temperature": 5
         },
         {
-            "uin": 1542404848,
-            "nick": "悔牌",
+            "uin": 1541702267,
+            "nick": "曲奇",
             "permission": "MEMBER",
-            "remark": "悔牌",
+            "remark": "曲奇",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
-            "joinTimestamp": 1661914008,
-            "lastSpeakTimestamp": 1662741583,
+            "joinTimestamp": 1688222832,
+            "lastSpeakTimestamp": 1688222832,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 2
+            "temperature": 0
         },
         {
             "uin": 1542617544,
@@ -7409,7 +7409,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1589506217,
-            "lastSpeakTimestamp": 1681276609,
+            "lastSpeakTimestamp": 1686790258,
             "isOfficialBot": false,
             "rank": 2,
             "point": 2,
@@ -7491,9 +7491,9 @@
         },
         {
             "uin": 1583392602,
-            "nick": "新森",
+            "nick": "瑰霁",
             "permission": "MEMBER",
-            "remark": "新森",
+            "remark": "瑰霁",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -7545,7 +7545,7 @@
         },
         {
             "uin": 1586901759,
-            "nick": "迷途知返",
+            "nick": "信难求.",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "QY.",
@@ -8318,6 +8318,24 @@
             "temperature": 0
         },
         {
+            "uin": 1707710461,
+            "nick": "江晚正愁余",
+            "permission": "MEMBER",
+            "remark": "江晚正愁余",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1686575059,
+            "lastSpeakTimestamp": 1686575059,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 0
+        },
+        {
             "uin": 1707741356,
             "nick": "有味是清欢",
             "permission": "MEMBER",
@@ -8427,9 +8445,9 @@
         },
         {
             "uin": 1711303349,
-            "nick": "♔煜婷.",
+            "nick": "♔淑婷.",
             "permission": "MEMBER",
-            "remark": "♔煜婷.",
+            "remark": "♔淑婷.",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -8568,6 +8586,24 @@
             "honors": [
             ],
             "temperature": 34
+        },
+        {
+            "uin": 1737822591,
+            "nick": "画画的北北",
+            "permission": "MEMBER",
+            "remark": "画画的北北",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1687329209,
+            "lastSpeakTimestamp": 1687329209,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 0
         },
         {
             "uin": 1739367373,
@@ -8759,13 +8795,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1644818645,
-            "lastSpeakTimestamp": 1677405653,
+            "lastSpeakTimestamp": 1686838508,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 36
+            "temperature": 37
         },
         {
             "uin": 1761500261,
@@ -9443,7 +9479,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1597947132,
-            "lastSpeakTimestamp": 1686288823,
+            "lastSpeakTimestamp": 1687699728,
             "isOfficialBot": false,
             "rank": 5,
             "point": 1384,
@@ -9551,7 +9587,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1611821649,
-            "lastSpeakTimestamp": 1686010925,
+            "lastSpeakTimestamp": 1687398728,
             "isOfficialBot": false,
             "rank": 4,
             "point": 707,
@@ -9803,13 +9839,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1660133748,
-            "lastSpeakTimestamp": 1676635402,
+            "lastSpeakTimestamp": 1687181520,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 10
+            "temperature": 11
         },
         {
             "uin": 1965955080,
@@ -9839,7 +9875,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1587906196,
-            "lastSpeakTimestamp": 1685009928,
+            "lastSpeakTimestamp": 1686977061,
             "isOfficialBot": false,
             "rank": 5,
             "point": 1384,
@@ -9957,7 +9993,7 @@
         },
         {
             "uin": 1978824580,
-            "nick": "Kntzo",
+            "nick": ".",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "Aa代看网课",
@@ -10080,24 +10116,6 @@
             "honors": [
             ],
             "temperature": 2
-        },
-        {
-            "uin": 2011978998,
-            "nick": "🦁",
-            "permission": "MEMBER",
-            "remark": "",
-            "nameCard": "20工造",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1616593018,
-            "lastSpeakTimestamp": 1616593018,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 0
         },
         {
             "uin": 2012279477,
@@ -11405,7 +11423,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1663065023,
-            "lastSpeakTimestamp": 1686113557,
+            "lastSpeakTimestamp": 1687842805,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -11594,24 +11612,6 @@
             "temperature": 0
         },
         {
-            "uin": 2242892527,
-            "nick": "与江讨笑",
-            "permission": "MEMBER",
-            "remark": "",
-            "nameCard": "2020   轨道交通技术   工程造价",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1591071564,
-            "lastSpeakTimestamp": 1591071564,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 0
-        },
-        {
             "uin": 2247837403,
             "nick": "蔓越莓",
             "permission": "MEMBER",
@@ -11682,24 +11682,6 @@
             "honors": [
             ],
             "temperature": 44
-        },
-        {
-            "uin": 2258280038,
-            "nick": "暗号",
-            "permission": "MEMBER",
-            "remark": "暗号",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1645259384,
-            "lastSpeakTimestamp": 1684668638,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 13
         },
         {
             "uin": 2263023404,
@@ -11873,7 +11855,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1589788233,
-            "lastSpeakTimestamp": 1685008990,
+            "lastSpeakTimestamp": 1687398757,
             "isOfficialBot": false,
             "rank": 4,
             "point": 913,
@@ -12845,7 +12827,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1588683272,
-            "lastSpeakTimestamp": 1678243964,
+            "lastSpeakTimestamp": 1688299850,
             "isOfficialBot": false,
             "rank": 3,
             "point": 265,
@@ -12881,7 +12863,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1643853797,
-            "lastSpeakTimestamp": 1676303476,
+            "lastSpeakTimestamp": 1687099302,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -12935,7 +12917,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1592378698,
-            "lastSpeakTimestamp": 1685183904,
+            "lastSpeakTimestamp": 1686591164,
             "isOfficialBot": false,
             "rank": 4,
             "point": 757,
@@ -12971,13 +12953,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1651328767,
-            "lastSpeakTimestamp": 1683018463,
+            "lastSpeakTimestamp": 1687611990,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 21
+            "temperature": 22
         },
         {
             "uin": 2481056013,
@@ -13104,6 +13086,24 @@
             "honors": [
             ],
             "temperature": 15
+        },
+        {
+            "uin": 2488936650,
+            "nick": "爱你呦@",
+            "permission": "MEMBER",
+            "remark": "爱你呦@",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1687340636,
+            "lastSpeakTimestamp": 1687924245,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 2
         },
         {
             "uin": 2490914272,
@@ -13376,6 +13376,24 @@
             "temperature": 0
         },
         {
+            "uin": 2536699377,
+            "nick": "泪已落下，问君知否",
+            "permission": "MEMBER",
+            "remark": "泪已落下，问君知否",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1686511834,
+            "lastSpeakTimestamp": 1686511834,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 0
+        },
+        {
             "uin": 2540148203,
             "nick": "尽欢",
             "permission": "MEMBER",
@@ -13485,7 +13503,7 @@
         },
         {
             "uin": 2558039949,
-            "nick": "陽光岁月",
+            "nick": "宇见",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "16房地产经营与管理班班长",
@@ -13547,13 +13565,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1651936830,
-            "lastSpeakTimestamp": 1683592794,
+            "lastSpeakTimestamp": 1687700468,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 24
+            "temperature": 25
         },
         {
             "uin": 2563598106,
@@ -13683,9 +13701,9 @@
         },
         {
             "uin": 2580929399,
-            "nick": "宇婷",
+            "nick": "宇婷就见面",
             "permission": "MEMBER",
-            "remark": "宇婷",
+            "remark": "宇婷就见面",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -13709,7 +13727,7 @@
             "muteTimestamp": 1576492193,
             "anonymousId": null,
             "joinTimestamp": 1537889004,
-            "lastSpeakTimestamp": 1682232110,
+            "lastSpeakTimestamp": 1686823322,
             "isOfficialBot": false,
             "rank": 5,
             "point": 1381,
@@ -13835,7 +13853,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1640052603,
-            "lastSpeakTimestamp": 1686238201,
+            "lastSpeakTimestamp": 1688185839,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -14417,11 +14435,11 @@
             "point": 792,
             "honors": [
             ],
-            "temperature": 87
+            "temperature": 88
         },
         {
             "uin": 2672420855,
-            "nick": "wry smile",
+            "nick": "假笑、",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "2020材快",
@@ -14835,21 +14853,21 @@
         },
         {
             "uin": 2740326430,
-            "nick": "遇见",
+            "nick": "佛系小李",
             "permission": "MEMBER",
-            "remark": "遇见",
+            "remark": "佛系小李",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1677685383,
-            "lastSpeakTimestamp": 1684713600,
+            "lastSpeakTimestamp": 1687133974,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 2
+            "temperature": 3
         },
         {
             "uin": 2741623913,
@@ -15168,24 +15186,6 @@
             "anonymousId": null,
             "joinTimestamp": 1564119991,
             "lastSpeakTimestamp": 1564119991,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 0
-        },
-        {
-            "uin": 2780706470,
-            "nick": "三十里开外",
-            "permission": "MEMBER",
-            "remark": "三十里开外",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1655982079,
-            "lastSpeakTimestamp": 1655982079,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -15824,24 +15824,6 @@
             "temperature": 2
         },
         {
-            "uin": 2867069499,
-            "nick": "历历",
-            "permission": "MEMBER",
-            "remark": "历历",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1541477390,
-            "lastSpeakTimestamp": 1554903525,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 0
-        },
-        {
             "uin": 2875935515,
             "nick": "晓晓",
             "permission": "MEMBER",
@@ -15887,7 +15869,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1620463538,
-            "lastSpeakTimestamp": 1686288790,
+            "lastSpeakTimestamp": 1687610843,
             "isOfficialBot": false,
             "rank": 3,
             "point": 175,
@@ -16463,7 +16445,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1644374696,
-            "lastSpeakTimestamp": 1682231692,
+            "lastSpeakTimestamp": 1687233561,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -17103,9 +17085,9 @@
         },
         {
             "uin": 3051587083,
-            "nick": "✘",
+            "nick": "_",
             "permission": "ADMINISTRATOR",
-            "remark": "✘",
+            "remark": "_",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -17787,7 +17769,7 @@
         },
         {
             "uin": 3153885573,
-            "nick": "阳光",
+            "nick": "Cc.",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "甜T",
@@ -17795,7 +17777,7 @@
             "muteTimestamp": 1555985666,
             "anonymousId": null,
             "joinTimestamp": 1551698357,
-            "lastSpeakTimestamp": 1671367735,
+            "lastSpeakTimestamp": 1688300013,
             "isOfficialBot": false,
             "rank": 3,
             "point": 224,
@@ -17913,9 +17895,9 @@
         },
         {
             "uin": 3164977149,
-            "nick": "熊乐",
+            "nick": "乐",
             "permission": "MEMBER",
-            "remark": "熊乐",
+            "remark": "乐",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -18939,9 +18921,9 @@
         },
         {
             "uin": 3326744813,
-            "nick": "悲   喜",
+            "nick": "Bu",
             "permission": "MEMBER",
-            "remark": "悲   喜",
+            "remark": "Bu",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -19037,13 +19019,13 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1653050394,
-            "lastSpeakTimestamp": 1684395872,
+            "lastSpeakTimestamp": 1686486051,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 26
+            "temperature": 27
         },
         {
             "uin": 3341464833,
@@ -19191,33 +19173,15 @@
         },
         {
             "uin": 3367453130,
-            "nick": "心心",
+            "nick": "天马星空",
             "permission": "MEMBER",
-            "remark": "心心",
+            "remark": "天马星空",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1682923754,
-            "lastSpeakTimestamp": 1682923754,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 0
-        },
-        {
-            "uin": 3370581392,
-            "nick": "哈比熊🐻",
-            "permission": "MEMBER",
-            "remark": "哈比熊🐻",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1682295866,
-            "lastSpeakTimestamp": 1683075262,
+            "lastSpeakTimestamp": 1686827793,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -19442,6 +19406,24 @@
             "temperature": 0
         },
         {
+            "uin": 3407834535,
+            "nick": "晚来天欲雪",
+            "permission": "MEMBER",
+            "remark": "晚来天欲雪",
+            "nameCard": "",
+            "specialTitle": "",
+            "muteTimestamp": 0,
+            "anonymousId": null,
+            "joinTimestamp": 1686575053,
+            "lastSpeakTimestamp": 1686575053,
+            "isOfficialBot": false,
+            "rank": 1,
+            "point": 0,
+            "honors": [
+            ],
+            "temperature": 0
+        },
+        {
             "uin": 3411205756,
             "nick": ".",
             "permission": "MEMBER",
@@ -19451,19 +19433,19 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1650960575,
-            "lastSpeakTimestamp": 1662113011,
+            "lastSpeakTimestamp": 1687098309,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
             "honors": [
             ],
-            "temperature": 3
+            "temperature": 4
         },
         {
             "uin": 3413954899,
-            "nick": "菜鸟驿站",
+            "nick": "爱咋咋地",
             "permission": "MEMBER",
-            "remark": "菜鸟驿站",
+            "remark": "爱咋咋地",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
@@ -19892,24 +19874,6 @@
             "temperature": 2
         },
         {
-            "uin": 3489886529,
-            "nick": "皮蛋solo粥.",
-            "permission": "MEMBER",
-            "remark": "皮蛋solo粥.",
-            "nameCard": "",
-            "specialTitle": "",
-            "muteTimestamp": 0,
-            "anonymousId": null,
-            "joinTimestamp": 1647425430,
-            "lastSpeakTimestamp": 1661268003,
-            "isOfficialBot": false,
-            "rank": 1,
-            "point": 0,
-            "honors": [
-            ],
-            "temperature": 3
-        },
-        {
             "uin": 3490235809,
             "nick": "~",
             "permission": "MEMBER",
@@ -20037,15 +20001,15 @@
         },
         {
             "uin": 3518585689,
-            "nick": "直树",
+            "nick": "半岛铁盒",
             "permission": "MEMBER",
-            "remark": "直树",
+            "remark": "半岛铁盒",
             "nameCard": "",
             "specialTitle": "",
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1657333459,
-            "lastSpeakTimestamp": 1664071563,
+            "lastSpeakTimestamp": 1686568591,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -20135,7 +20099,7 @@
             "muteTimestamp": 0,
             "anonymousId": null,
             "joinTimestamp": 1663302783,
-            "lastSpeakTimestamp": 1685421559,
+            "lastSpeakTimestamp": 1687099447,
             "isOfficialBot": false,
             "rank": 1,
             "point": 0,
@@ -20181,7 +20145,7 @@
         },
         {
             "uin": 3560966246,
-            "nick": "恒点.",
+            "nick": "wqzy",
             "permission": "MEMBER",
             "remark": "",
             "nameCard": "22智养老",

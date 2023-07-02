@@ -6,22 +6,25 @@ import com.example.miraihellp.entity.KeyWord;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
 import com.example.miraihellp.service.SensitiveWordsFilter;
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.Resource;
+import com.example.miraihellp.utils.CreateImgUtil;
 import lombok.extern.log4j.Log4j2;
 import net.mamoe.mirai.contact.Member;
 import net.mamoe.mirai.contact.MemberPermission;
+import net.mamoe.mirai.contact.NormalMember;
 import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
+import net.mamoe.mirai.message.data.Image;
 import net.mamoe.mirai.message.data.MessageChain;
 import net.mamoe.mirai.message.data.MessageSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
+import net.mamoe.mirai.utils.ExternalResource;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -96,7 +99,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
      * 管理员指令
      */
     @EventHandler
-    public void adminKey(GroupMessageEvent event){
+    public void adminKey(GroupMessageEvent event) throws Exception {
         // 获取发送消息的成员
         Member sender = event.getSender();
         String key = event.getMessage().contentToString().substring(0, 1);
@@ -112,8 +115,13 @@ public class GroupEventHandlers extends SimpleListenerHost {
             // 管理员
             log.info("管理员消息");
             adminMessageHandle(key,event);
+        }else if(sender.getPermission()==MemberPermission.MEMBER){
+            log.info("普通成员消息");
+            memberMessageHandle(key,event);
         }
 
+        //处理所有成员消息(群主,管理员,成员)
+        allMemberMessageHandle(event);
     }
 
     /**
@@ -166,7 +174,46 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 MongoTemplateCatch.mongoTemplateTemp.save(keyWord);
                 GroupServerCatch.keyWordList.add(newKeyWord);
                 break;
+            case "t":
+                atList.forEach(qq->{
+                    log.info(qq);
+                    NormalMember member = event.getGroup().getMembers().get(qq);
+                    member.setSpecialTitle("新人");
+                });
         }
+    }
+
+    private void memberMessageHandle(String key,GroupMessageEvent event){
+
+    }
+
+    private void allMemberMessageHandle(GroupMessageEvent event) throws Exception {
+
+        String msg=event.getMessage().contentToString();
+
+        if(msg.substring(0,2).equals("喜报")){
+            String text=msg.replace("喜报", "");
+            xiBao(text,event);
+        }
+
+    }
+
+    /*发送喜报*/
+    private void xiBao(String msg,GroupMessageEvent event) throws Exception {
+        // 加载BufferedImage
+        BufferedImage bufferedImage = CreateImgUtil.createBufferImgByXiBao(msg);
+        // 创建临时文件
+        File tempFile = File.createTempFile("temp", ".png");
+        // 将BufferedImage保存为临时文件
+        ImageIO.write(bufferedImage, "png", tempFile);
+        // 创建ExternalResource
+        ExternalResource resource = ExternalResource.create(tempFile);
+        // 上传图片到群中
+        Image image = event.getGroup().uploadImage(resource);
+        // 发送消息
+        event.getGroup().sendMessage(image);
+        // 删除临时文件
+        tempFile.delete();
     }
 
 
