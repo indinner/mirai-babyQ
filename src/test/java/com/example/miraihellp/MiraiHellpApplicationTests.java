@@ -22,11 +22,11 @@ class MiraiHellpApplicationTests {
     /**
      * 添加群设置
      */
-    @Test
+    //@Test
     void addGroupSetting(){
         GroupSetting groupSetting=new GroupSetting();
-        groupSetting.setID(163962686L);
-        groupSetting.setTwoClass(false);
+        groupSetting.setID(644687732L);
+        groupSetting.setTwoClass(true);
         groupSetting.setKeyword(true);
         groupSetting.setJoinKey(false);
         groupSetting.setJoinAnswer("null");

@@ -13,7 +13,7 @@ public class MiraiServer {
         // 使用自定义配置
         Bot bot = BotFactory.INSTANCE.newBot(1244018263, BotAuthorization.byQRCode(), new BotConfiguration() {{
             fileBasedDeviceInfo(); // 使用 device.json 存储设备信息
-            setProtocol(MiraiProtocol.ANDROID_WATCH); // 切换协议
+            setProtocol(MiraiProtocol.MACOS); // 切换协议
         }});
         bot.getConfiguration().enableContactCache();//开启列表缓存，正式上线建议关闭
         bot.login();
@@ -30,9 +30,11 @@ public class MiraiServer {
         }});
         //bot.getConfiguration().enableContactCache();//开启列表缓存，正式上线建议关闭
         bot.login();
+        System.out.println("陌生人数量"+bot.getStrangers().size());
         MiraiServer.afterLogin(bot);
         return bot;
     }
+
 
     public static void afterLogin(Bot bot) {
         bot.getEventChannel().registerListenerHost(new GroupEventHandlers());//注册自定义群聊监听事件

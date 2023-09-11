@@ -28,7 +28,7 @@ public class BabyQServerCatch {
     /*加载babyQ机器人*/
     @PostConstruct
     private void initBabyQ(){
-        babyQ = MiraiServer.login(3239535236L);
+        babyQ = MiraiServer.login(1244018263);
     }
 
 
