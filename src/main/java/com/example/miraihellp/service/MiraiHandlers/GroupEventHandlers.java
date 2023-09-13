@@ -3,6 +3,7 @@ package com.example.miraihellp.service.MiraiHandlers;
 import com.example.miraihellp.entity.BlackList;
 import com.example.miraihellp.entity.GroupSetting;
 import com.example.miraihellp.entity.KeyWord;
+import com.example.miraihellp.server.catchServer.BabyQServerCatch;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
 import com.example.miraihellp.service.SensitiveWordsFilter;
@@ -174,7 +175,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                     String niceName=normalMember.getNameCard();
                     log.info("检测昵称：{}",niceName);
                     // 检查名片是否包含关键词
-                    if (niceName.contains("关键词")) {
+                    if (niceName.contains("刷课")) {
                         // 踢出该成员
                         try {
                             normalMember.kick("昵称违规");
