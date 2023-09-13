@@ -175,7 +175,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                     String niceName=normalMember.getNameCard();
                     log.info("检测昵称：{}",niceName);
                     // 检查名片是否包含关键词
-                    if (niceName.contains("刷课")) {
+                    if (niceName.contains("刷")) {
                         // 踢出该成员
                         try {
                             normalMember.kick("昵称违规");
