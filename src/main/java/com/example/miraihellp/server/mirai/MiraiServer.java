@@ -24,7 +24,7 @@ public class MiraiServer {
 
     public static Bot login(long qq){
         // 使用自定义配置
-        Bot bot = BotFactory.INSTANCE.newBot(qq, BotAuthorization.byQRCode(), new BotConfiguration() {{
+        Bot bot = BotFactory.INSTANCE.newBot(qq, BotAuthorization.byQRCode(),new BotConfiguration() {{
             fileBasedDeviceInfo(); // 使用 device.json 存储设备信息
             setProtocol(MiraiProtocol.ANDROID_WATCH); // 切换协议
         }});
