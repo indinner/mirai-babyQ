@@ -179,10 +179,10 @@ public class GroupEventHandlers extends SimpleListenerHost {
                         // 踢出该成员
                         try {
                             normalMember.kick("昵称违规");
-                            event.getGroup().sendMessage("已踢出成员：" + niceName);
+                            //event.getGroup().sendMessage("已踢出成员：" + niceName);
                         } catch (Exception e) {
                             e.printStackTrace();
-                            event.getGroup().sendMessage("踢出成员失败：" + niceName);
+                            //event.getGroup().sendMessage("踢出成员失败：" + niceName);
                         }
                     }
                 });
