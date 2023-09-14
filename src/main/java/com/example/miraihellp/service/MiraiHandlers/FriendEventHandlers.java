@@ -29,21 +29,21 @@ public class FriendEventHandlers extends SimpleListenerHost {
         String key = event.getMessage().contentToString().substring(0, 2);
         switch (key){
             case "拉黑":
-                ContactList<Group> babyQGroups = BabyQServerCatch.babyQ.getGroups();
+                ContactList<Group> babyQGroups = BabyQServerCatch.babyQ.getGroups();//获取bot所在群列表
+                String stringQQ=event.getMessage().contentToString().substring(2);//获取拉黑的qq
+                Long qq=Long.parseLong(stringQQ);
+                BlackList blackList=new BlackList();
+                blackList.setQQ(qq);
+                addBlackList(blackList);
+                GroupServerCatch.blackList.put(qq,"new");//加入黑名单
                 babyQGroups.forEach(group -> {
                     if(group.getBotPermission().getLevel()==1){
                         //如果bot在群里是管理员
-                        String stringQQ=event.getMessage().contentToString().substring(2);
-                        Long qq=Long.parseLong(stringQQ);
                         try {
-                            BlackList blackList=new BlackList();
-                            blackList.setQQ(qq);
-                            addBlackList(blackList);
-                            GroupServerCatch.blackList.put(qq,"new");
                             group.getMembers().get(qq).kick("违规，请联系管理员");
                             event.getFriend().sendMessage(qq+"已清除");
                         }catch (Exception e){
-                            log.error("拉黑失败");
+                            log.error("拉黑失败"+e);
                         }
                     }
                 });
