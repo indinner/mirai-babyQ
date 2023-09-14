@@ -41,6 +41,7 @@ public class FriendEventHandlers extends SimpleListenerHost {
                             addBlackList(blackList);
                             GroupServerCatch.blackList.put(qq,"new");
                             group.getMembers().get(qq).kick("违规，请联系管理员");
+                            event.getFriend().sendMessage(qq+"已清除");
                         }catch (Exception e){
                             log.error("拉黑失败");
                         }
