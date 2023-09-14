@@ -15,6 +15,7 @@ import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
 import net.mamoe.mirai.message.data.MessageChain;
 import net.mamoe.mirai.message.data.MessageSource;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -149,7 +150,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 atList.forEach(qq->{
                     BlackList blackList=new BlackList();
                     blackList.setQQ(qq);
-                    MongoTemplateCatch.mongoTemplateTemp.save(blackList);
+                    addBlackList(blackList);
                     GroupServerCatch.blackList.put(qq,"new");
                     event.getGroup().getMembers().get(qq).kick("违规");//踢人
                 });
@@ -162,33 +163,17 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 MongoTemplateCatch.mongoTemplateTemp.save(keyWord);
                 GroupServerCatch.keyWordList.add(newKeyWord);
                 break;
-            case "t":
-                atList.forEach(qq->{
-                    log.info(qq);
-                    NormalMember member = event.getGroup().getMembers().get(qq);
-                    member.setSpecialTitle("新人");//设置头衔
-                });
-            case "J":
-                log.info("执行关键词踢出成员");
-                event.getGroup().getMembers().forEach(normalMember -> {
-                    log.info("chengyuan:{}",normalMember.toString());
-                    String niceName=normalMember.getNameCard();
-                    log.info("检测昵称：{}",niceName);
-                    // 检查名片是否包含关键词
-                    if (niceName.contains("刷")) {
-                        // 踢出该成员
-                        try {
-                            normalMember.kick("昵称违规");
-                            //event.getGroup().sendMessage("已踢出成员：" + niceName);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            //event.getGroup().sendMessage("踢出成员失败：" + niceName);
-                        }
-                    }
-                });
-
-
         }
+    }
+
+
+    /**
+     * 异步添加黑名单
+     * @param blackList
+     */
+    @Async
+    public void addBlackList(BlackList blackList){
+        MongoTemplateCatch.mongoTemplateTemp.save(blackList);
     }
 
     /**
