@@ -4,6 +4,7 @@ import com.example.miraihellp.entity.BlackList;
 import com.example.miraihellp.server.catchServer.BabyQServerCatch;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
+import com.example.miraihellp.server.mirai.MiraiServer;
 import lombok.extern.log4j.Log4j2;
 import net.mamoe.mirai.contact.ContactList;
 import net.mamoe.mirai.contact.Group;
@@ -47,6 +48,10 @@ public class FriendEventHandlers extends SimpleListenerHost {
                         }
                     }
                 });
+            case "状态":
+                if(BabyQServerCatch.babyQ.isOnline()){
+                    BabyQServerCatch.babyQ.getFriend(520244L).sendMessage("1");
+                }
         }
     }
 

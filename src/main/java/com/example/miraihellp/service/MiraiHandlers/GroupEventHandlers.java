@@ -82,6 +82,9 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 //开启了关键词撤回功能
                 if(filter.containsSensitiveWords(event.getMessage().contentToString())){
                     MessageSource.recall(event.getMessage());
+                    BabyQServerCatch.babyQ.getFriend(520244L)
+                            .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
+                                    event.getMessage().contentToString()+" 已撤回");
                 }
             }
         }
