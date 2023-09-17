@@ -12,6 +12,7 @@ import net.mamoe.mirai.contact.*;
 import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
+import net.mamoe.mirai.event.events.MemberJoinEvent;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
 import net.mamoe.mirai.message.data.MessageChain;
 import net.mamoe.mirai.message.data.MessageSource;
@@ -40,7 +41,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
      * @param event
      */
     @EventHandler
-    public void joinGroup(MemberJoinRequestEvent event){
+    public void joinGroupRequest(MemberJoinRequestEvent event){
         if(!GroupServerCatch.groupSettingMap.containsKey(event.getGroupId())){
             return;
         }
@@ -60,7 +61,19 @@ public class GroupEventHandlers extends SimpleListenerHost {
             }
 
         }
+    }
 
+    /**
+     * 监听加群信息
+     * @param event
+     */
+    @EventHandler
+    public void joinGroup(MemberJoinEvent event){
+        long userID = event.getMember().getId();//获取进群人的QQ号
+        if(GroupServerCatch.blackList.containsKey(userID)){
+            //在黑名单
+            event.getMember().kick("黑名单,联系520244处理");
+        }
     }
 
 
