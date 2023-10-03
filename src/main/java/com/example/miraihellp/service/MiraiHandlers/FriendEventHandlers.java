@@ -48,10 +48,35 @@ public class FriendEventHandlers extends SimpleListenerHost {
                         }
                     }
                 });
+                break;
+            case "测黑":
+                ContactList<Group> babyQGroups1 = BabyQServerCatch.babyQ.getGroups();//获取bot所在群列表
+
+
+                GroupServerCatch.blackList.forEach((k,v)->{
+
+                    babyQGroups1.forEach(group -> {
+                        if(group.getBotPermission().getLevel()==1){
+                            //如果bot在群里是管理员
+                            try {
+                                group.getMembers().get(k).kick("违规，请联系管理员");
+                                event.getFriend().sendMessage(k+"已清除");
+                            }catch (Exception e){
+                                log.error("拉黑失败"+e);
+                            }
+                        }
+                    });
+
+
+                });
+
+
+                break;
             case "状态":
                 if(BabyQServerCatch.babyQ.isOnline()){
                     BabyQServerCatch.babyQ.getFriend(520244L).sendMessage("1");
                 }
+                break;
         }
     }
 
