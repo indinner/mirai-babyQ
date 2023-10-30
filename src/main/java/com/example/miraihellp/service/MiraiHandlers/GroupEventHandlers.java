@@ -16,6 +16,8 @@ import net.mamoe.mirai.event.events.MemberJoinEvent;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
 import net.mamoe.mirai.message.data.MessageChain;
 import net.mamoe.mirai.message.data.MessageSource;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
@@ -95,6 +97,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 //开启了关键词撤回功能
                 if(filter.containsSensitiveWords(event.getMessage().contentToString())){
                     MessageSource.recall(event.getMessage());
+                    event.getSender().mute(60*60*12);
                     BabyQServerCatch.babyQ.getFriend(520244L)
                             .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
                                     event.getMessage().contentToString()+" 已撤回");
@@ -178,6 +181,12 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 keyWord.setState(1);
                 MongoTemplateCatch.mongoTemplateTemp.save(keyWord);
                 GroupServerCatch.keyWordList.add(newKeyWord);
+                break;
+            case "-":
+                String newKeyWord1 = event.getMessage().contentToString().substring(1);
+                Query query=new Query(Criteria.where("content").is(newKeyWord1));
+                MongoTemplateCatch.mongoTemplateTemp.remove(query, KeyWord.class);
+                GroupServerCatch.keyWordList.remove(newKeyWord1);
                 break;
         }
     }
