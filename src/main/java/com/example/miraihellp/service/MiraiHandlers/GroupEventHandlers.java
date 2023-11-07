@@ -22,7 +22,9 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -79,6 +81,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
     }
 
 
+    private static Map<Long,Integer> black_list_number=new HashMap<>();//记录触发关键词的次数
 
     /**
      * 监听关键词撤回
@@ -97,7 +100,13 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 //开启了关键词撤回功能
                 if(filter.containsSensitiveWords(event.getMessage().contentToString())){
                     MessageSource.recall(event.getMessage());
-                    event.getSender().mute(60*60*12);
+                    if(black_list_number.containsKey(event.getSender().getId())){
+                        black_list_number.put(event.getSender().getId(),black_list_number.get(event.getSender().getId())+1);
+                    }else {
+                        black_list_number.put(event.getSender().getId(),1);
+                    }
+                    event.getSender().mute(60*black_list_number.get(event.getSender().getId()));
+                    event.getGroup().sendMessage(event.getSender().getId()+"消息违规，警告"+black_list_number.get(event.getSender().getId())+"次！");
                     BabyQServerCatch.babyQ.getFriend(520244L)
                             .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
                                     event.getMessage().contentToString()+" 已撤回");
