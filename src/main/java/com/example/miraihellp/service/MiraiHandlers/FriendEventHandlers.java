@@ -9,6 +9,7 @@ import lombok.extern.log4j.Log4j2;
 import net.mamoe.mirai.contact.ContactList;
 import net.mamoe.mirai.contact.Group;
 import net.mamoe.mirai.contact.MemberPermission;
+import net.mamoe.mirai.contact.NormalMember;
 import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.FriendMessageEvent;
@@ -66,17 +67,19 @@ public class FriendEventHandlers extends SimpleListenerHost {
                             }
                         }
                     });
-
-
                 });
-
-
                 break;
             case "状态":
                 if(BabyQServerCatch.babyQ.isOnline()){
                     BabyQServerCatch.babyQ.getFriend(520244L).sendMessage("1");
                 }
                 break;
+            case "全踢":
+                Group group = BabyQServerCatch.babyQ.getGroup(708880840L);
+                ContactList<NormalMember> members = group.getMembers();
+                members.forEach(normalMember -> {
+                    System.out.println(normalMember.toString());
+                });
         }
     }
 
