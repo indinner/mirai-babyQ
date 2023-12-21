@@ -80,7 +80,7 @@ public class TwoClassServer {
             //构建查询参数
             JSONObject params=new JSONObject();
             params.set("search","");
-            params.set("pageNum",1);
+            params.set("pageNum",i+1);
             params.set("pageSize",10);
             params.set("sortType",1);
             params.set("activityTime",this.LocalDateTime());
@@ -113,6 +113,8 @@ public class TwoClassServer {
             String text="活动名称："+name+"\n"+"剩余名额："+people+"\n"+"直达链接："+ACVITITY_URL+id+"\n\n";
             resText=resText+text;
         }
+        System.out.println(resText);
+        System.out.println(resText.length());
         return resText;
     }
 
