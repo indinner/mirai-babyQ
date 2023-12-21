@@ -27,14 +27,14 @@ import java.util.Date;
  * @Version 1.0
  * @Doc:第二课堂相关服务
  */
-/*@Service
-@EnableScheduling*/
+@Service
+@EnableScheduling
 @Log4j2
 public class TwoClassServer {
 
     private static String AES_KEY="Hfnuk#Client2022";
 
-    private static String TOKEN="IgFshAJnRhUvOp/IIsfRhW0QzjbBjeOLD5wlfPP5yhQqrIVvbjDxylUSdpMdUyUsmq6eZgMeIoHmA2DyHIClM5ePwhAuZpXmfc4SAGw4i1SOr2AagaraVXBpc3ZW/74cGiK1xexJhbd19RHlnNh4FA==";
+    private static String TOKEN="tdpW289Ops/ZjCLrVb3585H48sein494hRDqSFPtbHEqrIVvbjDxylUSdpMdUyUsmq6eZgMeIoHmA2DyHIClM5ePwhAuZpXmfc4SAGw4i1SOr2AagaraVXBpc3ZW/74cGiK1xexJhbd19RHlnNh4FA==";
 
     private static String DEVICE="FAAE6E21-013F-42D1-B722-599DE3DC340F";
 
@@ -74,8 +74,6 @@ public class TwoClassServer {
 
     @Scheduled(fixedRate = 42000)
     public String showActivity() throws Exception {
-        String icon="https://cdn.indinner.com/fig/headimg/ek.jpeg";
-
         //构建查询参数
         JSONObject params=new JSONObject();
         params.set("search","");

@@ -35,6 +35,7 @@ public class AESDecryptor {
         return plaintext;
     }
 
+
     /**
      * 加密
      * @param plaintext
@@ -60,7 +61,7 @@ public class AESDecryptor {
     public static void main(String[] args) throws UnsupportedEncodingException {
 
 
-        String ciphertext="cIMV1YToIMSKEPK6+r6Obqh/C/NzkNFLkuF2ti7rJfvl7Y4DyqmPGx+2YKoq8N5dFJPIjPp/T4gIwJXR0JKG/YM6sloiWLN8Lbmiqrv0vPrihculFgKzXuzShIqanx00PtnyCPJlzx8625fasQLcaujoY8oR9/Ry6VRChMvcpLTk2Ont5gX0qrl+JO7K06Zh5ZJUlw0ESUSf3PeuZIyFKdNRSnV+tKJA7eyP7dDcX2f4nZ4RhV0WGFaDOlgvQZWus1UJ4iE3ufniyRoIUvvfXxwi2QNVHfaU4wUMdTrRPuq5ufpST6HWEldlGAswuvH0MQLFw3BdEdsmhEXqIMTDdI7ovbAnr6XurWfhDDY8oFw=";
+        String ciphertext="fYpgFUlLx4DtefJQsor8xXEP6qeTHPL1OvhJcjrCmp1PQYvi3UpBLPZjlrTNF+1jC7emu/uy43wHS9WLtGVkjIM6sloiWLN8Lbmiqrv0vPrihculFgKzXuzShIqanx00PtnyCPJlzx8625fasQLcaujoY8oR9/Ry6VRChMvcpLTk2Ont5gX0qrl+JO7K06Zh5ZJUlw0ESUSf3PeuZIyFKdNRSnV+tKJA7eyP7dDcX2f4nZ4RhV0WGFaDOlgvQZWus1UJ4iE3ufniyRoIUvvfXxwi2QNVHfaU4wUMdTrRPuq5ufpST6HWEldlGAswuvH0MQLFw3BdEdsmhEXqIMTDdK72En1bkpXuI4iji0TeC8M=";
 
         ciphertext = URLDecoder.decode(ciphertext, "UTF-8");
 

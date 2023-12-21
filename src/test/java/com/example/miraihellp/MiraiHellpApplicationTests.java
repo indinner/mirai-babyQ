@@ -25,8 +25,8 @@ class MiraiHellpApplicationTests {
     //@Test
     void addGroupSetting(){
         GroupSetting groupSetting=new GroupSetting();
-        groupSetting.setID(644687732L);
-        groupSetting.setTwoClass(true);
+        groupSetting.setID(708880840L);
+        groupSetting.setTwoClass(false);
         groupSetting.setKeyword(true);
         groupSetting.setJoinKey(false);
         groupSetting.setJoinAnswer("null");
