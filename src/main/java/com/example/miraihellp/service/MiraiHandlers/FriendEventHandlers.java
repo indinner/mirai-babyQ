@@ -78,11 +78,7 @@ public class FriendEventHandlers extends SimpleListenerHost {
                 Group group = BabyQServerCatch.babyQ.getGroup(708880840L);
                 ContactList<NormalMember> members = group.getMembers();
                 members.forEach(normalMember -> {
-                    try {
-                        normalMember.kick("sb");
-                    }catch (Exception e){
-                        System.out.println(e.getMessage());
-                    }
+                    System.out.println(normalMember.toString());
                 });
         }
     }

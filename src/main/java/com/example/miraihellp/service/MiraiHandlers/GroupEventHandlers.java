@@ -108,7 +108,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                     }else {
                         black_list_number.put(event.getSender().getId(),1);
                     }
-                    event.getSender().mute(60*black_list_number.get(event.getSender().getId()));
+                    event.getSender().mute(60*black_list_number.get(event.getSender().getId())*black_list_number.get(event.getSender().getId()));
                     event.getGroup().sendMessage(event.getSender().getId()+"消息违规，警告"+black_list_number.get(event.getSender().getId())+"次！");
                     BabyQServerCatch.babyQ.getFriend(520244L)
                             .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
@@ -220,8 +220,6 @@ public class GroupEventHandlers extends SimpleListenerHost {
     }
 
 
-    @Resource
-    TwoClassServer twoClassServer;
 
     /**
      * 处理普通成员消息

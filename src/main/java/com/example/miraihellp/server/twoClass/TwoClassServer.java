@@ -113,8 +113,6 @@ public class TwoClassServer {
             String text="活动名称："+name+"\n"+"剩余名额："+people+"\n"+"直达链接："+ACVITITY_URL+id+"\n\n";
             resText=resText+text;
         }
-        System.out.println(resText);
-        System.out.println(resText.length());
         return resText;
     }
 
