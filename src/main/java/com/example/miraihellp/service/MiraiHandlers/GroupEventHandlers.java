@@ -6,6 +6,7 @@ import com.example.miraihellp.entity.KeyWord;
 import com.example.miraihellp.server.catchServer.BabyQServerCatch;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
+import com.example.miraihellp.server.catchServer.TwoClassCatch;
 import com.example.miraihellp.server.twoClass.TwoClassServer;
 import com.example.miraihellp.service.SensitiveWordsFilter;
 import jakarta.annotation.Resource;
@@ -126,7 +127,10 @@ public class GroupEventHandlers extends SimpleListenerHost {
         // 获取发送消息的成员
         Member sender = event.getSender();
         String key = event.getMessage().contentToString().substring(0, 1);
-        String key2 = event.getMessage().contentToString().substring(0, 2);
+        String key2="--";
+        if(event.getMessage().contentToString().length()>=2){
+            key2 = event.getMessage().contentToString().substring(0, 2);
+        }
 
         ownerMessageHandle(key,event);
         // 判断是否为管理员
@@ -135,11 +139,12 @@ public class GroupEventHandlers extends SimpleListenerHost {
             log.info("群主消息");
             ownerMessageHandle(key,event);
             adminMessageHandle(key,event);
-
+            memberMessageHandle(key2,event);
         } else if(sender.getPermission() == MemberPermission.ADMINISTRATOR){
             // 管理员
             log.info("管理员消息");
             adminMessageHandle(key,event);
+            memberMessageHandle(key2,event);
         }else if(sender.getPermission()==MemberPermission.MEMBER){
             log.info("普通成员消息");
             memberMessageHandle(key2,event);
@@ -226,7 +231,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
     private void memberMessageHandle(String key,GroupMessageEvent event) throws Exception {
         switch (key){
             case "二课":
-                event.getGroup().sendMessage(twoClassServer.getNewActivity());
+                event.getGroup().sendMessage(TwoClassCatch.getNewActivity());
         }
     }
 
