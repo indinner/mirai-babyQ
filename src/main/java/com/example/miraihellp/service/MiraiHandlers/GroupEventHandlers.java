@@ -231,7 +231,11 @@ public class GroupEventHandlers extends SimpleListenerHost {
     private void memberMessageHandle(String key,GroupMessageEvent event) throws Exception {
         switch (key){
             case "二课":
-                event.getGroup().sendMessage(TwoClassCatch.getNewActivity());
+                List<String> newActivity = TwoClassCatch.getNewActivity();
+                for (int i = 0; i < newActivity.size(); i++) {
+                    event.getGroup().sendMessage(newActivity.get(i));
+                    Thread.sleep(300);
+                }
         }
     }
 
