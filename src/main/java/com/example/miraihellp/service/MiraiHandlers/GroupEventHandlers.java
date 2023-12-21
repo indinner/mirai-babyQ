@@ -6,7 +6,9 @@ import com.example.miraihellp.entity.KeyWord;
 import com.example.miraihellp.server.catchServer.BabyQServerCatch;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
+import com.example.miraihellp.server.twoClass.TwoClassServer;
 import com.example.miraihellp.service.SensitiveWordsFilter;
+import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
 import net.mamoe.mirai.contact.*;
 import net.mamoe.mirai.event.EventHandler;
@@ -124,6 +126,8 @@ public class GroupEventHandlers extends SimpleListenerHost {
         // 获取发送消息的成员
         Member sender = event.getSender();
         String key = event.getMessage().contentToString().substring(0, 1);
+        String key2 = event.getMessage().contentToString().substring(0, 2);
+
         ownerMessageHandle(key,event);
         // 判断是否为管理员
         if (sender.getPermission() == MemberPermission.OWNER) {
@@ -138,7 +142,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
             adminMessageHandle(key,event);
         }else if(sender.getPermission()==MemberPermission.MEMBER){
             log.info("普通成员消息");
-            memberMessageHandle(key,event);
+            memberMessageHandle(key2,event);
         }
     }
 
@@ -210,13 +214,20 @@ public class GroupEventHandlers extends SimpleListenerHost {
         MongoTemplateCatch.mongoTemplateTemp.save(blackList);
     }
 
+
+    @Resource
+    TwoClassServer twoClassServer;
+
     /**
      * 处理普通成员消息
      * @param key
      * @param event
      */
-    private void memberMessageHandle(String key,GroupMessageEvent event){
-
+    private void memberMessageHandle(String key,GroupMessageEvent event) throws Exception {
+        switch (key){
+            case "二课":
+                event.getGroup().sendMessage(twoClassServer.getNewActivity());
+        }
     }
 
 

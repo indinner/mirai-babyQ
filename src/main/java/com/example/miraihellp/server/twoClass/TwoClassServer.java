@@ -20,6 +20,8 @@ import java.net.URLEncoder;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @Author indinner
@@ -69,6 +71,49 @@ public class TwoClassServer {
         JSONArray list=data.getJSONArray("list");
         return list;
 
+    }
+
+    //获取最新的活动并通知
+    public String getNewActivity() throws Exception {
+        JSONArray allArray=new JSONArray();
+        for (int i = 0; i < 10; i++) {
+            //构建查询参数
+            JSONObject params=new JSONObject();
+            params.set("search","");
+            params.set("pageNum",1);
+            params.set("pageSize",10);
+            params.set("sortType",1);
+            params.set("activityTime",this.LocalDateTime());
+            params.set("classifyId",0);
+
+            JSONObject authorization=new JSONObject();
+            authorization.set("token",TOKEN);
+            authorization.set("platform",3);
+            authorization.set("version","2.0.5");
+            authorization.set("device",DEVICE);
+            authorization.set("timestamp",new Date().getTime());
+
+            JSONArray activityList = this.getActivityList(params, authorization);
+            if(activityList.size()<10){
+                allArray.addAll(activityList);
+                break;
+            }else {
+                allArray.addAll(activityList);
+            }
+        }
+
+        List<JSONObject> jsonObjectList = allArray.stream()
+                .map(obj -> (JSONObject) obj)
+                .collect(Collectors.toList());
+        String resText="";
+        for (int i = 0; i < jsonObjectList.size(); i++) {
+            String name=jsonObjectList.get(i).getStr("name");
+            Integer people=jsonObjectList.get(i).getInt("peopleLimit")-jsonObjectList.get(i).getInt("enrollCount");
+            Integer id=jsonObjectList.get(i).getInt("id");
+            String text="活动名称："+name+"\n"+"剩余名额："+people+"\n"+"直达链接："+ACVITITY_URL+id+"\n\n";
+            resText=resText+text;
+        }
+        return resText;
     }
 
 
@@ -126,8 +171,8 @@ public class TwoClassServer {
 
     public static void main(String[] args) throws Exception {
         TwoClassServer twoClassService=new TwoClassServer();
-
-        twoClassService.showActivity();
+        //twoClassService.showActivity();
+        twoClassService.getNewActivity();
 
     }
 
