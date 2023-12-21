@@ -4,6 +4,7 @@ import com.example.miraihellp.entity.BlackList;
 import com.example.miraihellp.server.catchServer.BabyQServerCatch;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
+import com.example.miraihellp.server.catchServer.TwoClassCatch;
 import com.example.miraihellp.server.mirai.MiraiServer;
 import lombok.extern.log4j.Log4j2;
 import net.mamoe.mirai.contact.ContactList;
@@ -27,7 +28,7 @@ import java.io.IOException;
 public class FriendEventHandlers extends SimpleListenerHost {
 
     @EventHandler
-    public void onMessage(FriendMessageEvent event) throws IOException {
+    public void onMessage(FriendMessageEvent event) throws Exception {
         String key = event.getMessage().contentToString().substring(0, 2);
         switch (key){
             case "拉黑":
@@ -74,12 +75,8 @@ public class FriendEventHandlers extends SimpleListenerHost {
                     BabyQServerCatch.babyQ.getFriend(520244L).sendMessage("1");
                 }
                 break;
-            case "全踢":
-                Group group = BabyQServerCatch.babyQ.getGroup(708880840L);
-                ContactList<NormalMember> members = group.getMembers();
-                members.forEach(normalMember -> {
-                    System.out.println(normalMember.toString());
-                });
+            case "二课":
+                BabyQServerCatch.babyQ.getFriend(520244L).sendMessage(TwoClassCatch.getNewActivity());
         }
     }
 

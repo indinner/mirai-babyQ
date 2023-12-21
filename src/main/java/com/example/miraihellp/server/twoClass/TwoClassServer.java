@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 import java.net.URLEncoder;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -75,7 +74,7 @@ public class TwoClassServer {
     }
 
     //获取最新的活动并通知
-    public List<String> getNewActivity() throws Exception {
+    public String getNewActivity() throws Exception {
         JSONArray allArray=new JSONArray();
         for (int i = 0; i < 10; i++) {
             //构建查询参数
@@ -106,15 +105,17 @@ public class TwoClassServer {
         List<JSONObject> jsonObjectList = allArray.stream()
                 .map(obj -> (JSONObject) obj)
                 .collect(Collectors.toList());
-        List<String> res=new ArrayList<>();
+        String resText="";
         for (int i = 0; i < jsonObjectList.size(); i++) {
             String name=jsonObjectList.get(i).getStr("name");
             Integer people=jsonObjectList.get(i).getInt("peopleLimit")-jsonObjectList.get(i).getInt("enrollCount");
             Integer id=jsonObjectList.get(i).getInt("id");
-            String text="活动名称："+name+"\n"+"剩余名额："+people+"\n"+"直达链接："+ACVITITY_URL+id;
-            res.add(text);
+            String text="活动名称："+name+"\n"+"剩余名额："+people+"\n"+"直达链接："+ACVITITY_URL+id+"\n\n";
+            resText=resText+text;
         }
-        return res;
+        System.out.println(resText);
+        System.out.println(resText.length());
+        return resText;
     }
 
 

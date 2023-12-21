@@ -147,7 +147,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
             memberMessageHandle(key2,event);
         }else if(sender.getPermission()==MemberPermission.MEMBER){
             log.info("普通成员消息");
-            memberMessageHandle(key2,event);
+            /*memberMessageHandle(key2,event);*/
         }
     }
 
@@ -229,11 +229,10 @@ public class GroupEventHandlers extends SimpleListenerHost {
     private void memberMessageHandle(String key,GroupMessageEvent event) throws Exception {
         switch (key){
             case "二课":
-                List<String> newActivity = TwoClassCatch.getNewActivity();
-                for (int i = 0; i < newActivity.size(); i++) {
-                    event.getGroup().sendMessage(newActivity.get(i));
-                    Thread.sleep(300);
-                }
+                event.getGroup().sendMessage(TwoClassCatch.getNewActivity());
+                break;
+            case "11":
+                event.getGroup().sendMessage("123");
         }
     }
 
