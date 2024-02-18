@@ -33,7 +33,7 @@ public class BabyQServerCatch {
     /*加载babyQ机器人*/
     @PostConstruct
     private void initBabyQ(){
-        babyQ = MiraiServer.login(1244018263L);
+        babyQ = MiraiServer.login(1244018263);
     }
 
     /*每分钟检测一次bot是否在线*/
@@ -41,7 +41,7 @@ public class BabyQServerCatch {
     public void executeTask() {
         if(!babyQ.isOnline()){
             log.error("bot离线,重新登陆");
-            babyQ = MiraiServer.login(1244018263L);
+            babyQ = MiraiServer.login(2270781775L);
         }else {
             log.info("bot当前状态正常");
         }

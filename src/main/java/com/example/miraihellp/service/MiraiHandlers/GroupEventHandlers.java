@@ -1,5 +1,6 @@
 package com.example.miraihellp.service.MiraiHandlers;
 
+import cn.hutool.http.HttpUtil;
 import com.example.miraihellp.entity.BlackList;
 import com.example.miraihellp.entity.GroupSetting;
 import com.example.miraihellp.entity.KeyWord;
@@ -8,7 +9,9 @@ import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
 import com.example.miraihellp.server.catchServer.TwoClassCatch;
 import com.example.miraihellp.server.twoClass.TwoClassServer;
+import com.example.miraihellp.service.GPT;
 import com.example.miraihellp.service.SensitiveWordsFilter;
+import io.github.asleepyfish.util.OpenAiUtils;
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
 import net.mamoe.mirai.contact.*;
@@ -17,7 +20,9 @@ import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.event.events.MemberJoinEvent;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
+import net.mamoe.mirai.message.data.At;
 import net.mamoe.mirai.message.data.MessageChain;
+import net.mamoe.mirai.message.data.MessageChainBuilder;
 import net.mamoe.mirai.message.data.MessageSource;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -151,6 +156,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
         }
     }
 
+
     /**
      * 处理群主指令
      * @param key
@@ -233,7 +239,23 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 break;
             case "11":
                 event.getGroup().sendMessage("123");
+                break;
+            case "??":
+                String url="http://42.51.20.107:9021/chat/chat?content=" + event.getMessage().contentToString().substring(2) + "&sessionID=" +
+                        event.getSender().getId();
+                System.out.println(url);
+                String s = HttpUtil.get("http://42.51.20.107:9021/chat/chat?content=" + event.getMessage().contentToString().substring(2) + "&sessionID=" +
+                        event.getSender().getId());
+                System.out.println(s.substring(0,600));
+                event.getGroup().sendMessage(s.substring(0,600));
         }
+    }
+
+
+    public static void main(String[] args) {
+        List<String> stringList = GPT.GPT4.chatCompletion("你是什么东西"
+                , "123");
+        System.out.println(stringList.toString());
     }
 
 
