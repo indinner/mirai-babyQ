@@ -12,6 +12,7 @@ import com.example.miraihellp.server.catchServer.TwoClassCatch;
 import com.example.miraihellp.server.twoClass.TwoClassServer;
 import com.example.miraihellp.service.GPT;
 import com.example.miraihellp.service.SensitiveWordsFilter;
+import com.example.miraihellp.utils.CreateImgUtil;
 import io.github.asleepyfish.util.OpenAiUtils;
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
@@ -21,16 +22,19 @@ import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.event.events.MemberJoinEvent;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
-import net.mamoe.mirai.message.data.At;
-import net.mamoe.mirai.message.data.MessageChain;
-import net.mamoe.mirai.message.data.MessageChainBuilder;
-import net.mamoe.mirai.message.data.MessageSource;
+import net.mamoe.mirai.message.data.*;
+import net.mamoe.mirai.utils.ExternalResource;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -235,11 +239,11 @@ public class GroupEventHandlers extends SimpleListenerHost {
      * @param event
      */
     private void memberMessageHandle(String key,GroupMessageEvent event) throws Exception {
+        Pattern p = Pattern.compile("[1-9][0-9]{4,9}");
+        Matcher m = p.matcher(event.getMessage().contentToString());
         switch (key){
             case "禁言":
                 System.out.println(event.getMessage().contentToString());
-                Pattern p = Pattern.compile("[1-9][0-9]{4,9}");
-                Matcher m = p.matcher(event.getMessage().contentToString());
                 Integer number=getLastNumber(event.getMessage().contentToString());//禁言时长
                 /*查询积分*/
                 Points points = MongoTemplateCatch.mongoTemplateTemp.findOne(new Query(Criteria.where("_id").is(String.valueOf(event.getSender().getId()))), Points.class);
@@ -271,7 +275,48 @@ public class GroupEventHandlers extends SimpleListenerHost {
                     event.getGroup().sendMessage("签到失败");
                 }
                 break;
+            case "悲报":
+                toImgApi("悲报",event.getMessage().contentToString().substring(2),event);
+                break;
+            case "喜报":
+                toImgApi("喜报",event.getMessage().contentToString().substring(2),event);
+                break;
+            case "爱心":
+                while(m.find()) {
+                    String qqNumStr = m.group();
+                    long qqNum = Long.parseLong(qqNumStr);
+                    toImgApi("爱心",String.valueOf(qqNum),event);
+                }
+                break;
         }
+    }
+
+    /*发送喜报*/
+    private void toImgApi(String key,String msg,GroupMessageEvent event) throws Exception {
+
+        String imageUrl="";
+        switch (key){
+            case "悲报":
+                imageUrl="https://api.andeer.top/API/img_beibao.php?data="+msg;
+                break;
+            case "喜报":
+                imageUrl="https://api.andeer.top/API/img_xibao.php?data="+msg;
+                break;
+            case "爱心":
+                imageUrl="https://api.andeer.top/API/img_love.php?qq="+msg;
+        }
+        // 创建临时文件
+        File tempFile = File.createTempFile("temp", ".png");
+        HttpUtil.downloadFile(imageUrl, tempFile);
+        // 创建ExternalResource
+        ExternalResource resource = ExternalResource.create(tempFile);
+        // 上传图片到群中
+        Image image = event.getGroup().uploadImage(resource);
+        // 发送消息
+        event.getGroup().sendMessage(image);
+        // 删除临时文件
+        tempFile.delete();
+
     }
 
     public Integer addPoints(String qq) {
@@ -286,14 +331,14 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 return -1;
             }else {
                 //没签到，签到
-                Update update = new Update().inc("points", 100);
+                Update update = new Update().inc("points", 1000);
                 MongoTemplateCatch.mongoTemplateTemp.findAndModify(query, update, Points.class);
-                return points1.getPoints()+100;
+                return points1.getPoints()+1000;
             }
         }else {
-            Points points = new Points(qq, 100,new Date().getTime());
+            Points points = new Points(qq, 1000,new Date().getTime());
             MongoTemplateCatch.mongoTemplateTemp.insert(points);
-            return 100;
+            return 1000;
         }
     }
 
