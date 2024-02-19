@@ -4,6 +4,7 @@ import cn.hutool.http.HttpUtil;
 import com.example.miraihellp.entity.BlackList;
 import com.example.miraihellp.entity.GroupSetting;
 import com.example.miraihellp.entity.KeyWord;
+import com.example.miraihellp.entity.Points;
 import com.example.miraihellp.server.catchServer.BabyQServerCatch;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
@@ -26,13 +27,14 @@ import net.mamoe.mirai.message.data.MessageChainBuilder;
 import net.mamoe.mirai.message.data.MessageSource;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -152,7 +154,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
             memberMessageHandle(key2,event);
         }else if(sender.getPermission()==MemberPermission.MEMBER){
             log.info("普通成员消息");
-            /*memberMessageHandle(key2,event);*/
+            memberMessageHandle(key2,event);
         }
     }
 
@@ -234,20 +236,79 @@ public class GroupEventHandlers extends SimpleListenerHost {
      */
     private void memberMessageHandle(String key,GroupMessageEvent event) throws Exception {
         switch (key){
-            case "二课":
-                event.getGroup().sendMessage(TwoClassCatch.getNewActivity());
+            case "禁言":
+                System.out.println(event.getMessage().contentToString());
+                Pattern p = Pattern.compile("[1-9][0-9]{4,9}");
+                Matcher m = p.matcher(event.getMessage().contentToString());
+                Integer number=getLastNumber(event.getMessage().contentToString());//禁言时长
+                /*查询积分*/
+                Points points = MongoTemplateCatch.mongoTemplateTemp.findOne(new Query(Criteria.where("_id").is(String.valueOf(event.getSender().getId()))), Points.class);
+                if(points!=null){
+                    while(m.find()) {
+                        String qqNumStr = m.group();
+                        long qqNum = Long.parseLong(qqNumStr);
+                        if(points.getPoints()-number>=0){
+                            //禁言并扣除积分
+                            NormalMember normalMember = event.getGroup().get(qqNum);
+                            if (normalMember != null) {
+                                normalMember.mute(number);
+                                Update update=Update.update("points",points.getPoints()-number);
+                                MongoTemplateCatch.mongoTemplateTemp
+                                        .upsert(new Query(Criteria.where("_id").is(String.valueOf(event.getSender().getId()))),
+                                                update,Points.class);
+                            }
+                        }
+                    }
+                }else {
+                    event.getGroup().sendMessage("积分不足,可以通过[签到]获取");
+                }
                 break;
-            case "11":
-                event.getGroup().sendMessage("123");
+            case "签到":
+                Integer state=addPoints(String.valueOf(event.getSender().getId()));
+                if(state!=-1){
+                    event.getGroup().sendMessage("签到成功,积分:"+state);
+                }else {
+                    event.getGroup().sendMessage("签到失败");
+                }
                 break;
-            case "??":
-                String url="http://42.51.20.107:9021/chat/chat?content=" + event.getMessage().contentToString().substring(2) + "&sessionID=" +
-                        event.getSender().getId();
-                System.out.println(url);
-                String s = HttpUtil.get("http://42.51.20.107:9021/chat/chat?content=" + event.getMessage().contentToString().substring(2) + "&sessionID=" +
-                        event.getSender().getId());
-                System.out.println(s.substring(0,600));
-                event.getGroup().sendMessage(s.substring(0,600));
+        }
+    }
+
+    public Integer addPoints(String qq) {
+        Query query = new Query(Criteria.where("_id").is(qq));
+
+        Points points1 = MongoTemplateCatch.mongoTemplateTemp.findOne(query, Points.class);
+        if(points1!=null){
+            LocalDate date = Instant.ofEpochMilli(points1.getCreateTime()).atZone(ZoneId.systemDefault()).toLocalDate();
+            LocalDate now = LocalDate.now();
+            if(date.equals(now)){
+                //已经签到
+                return -1;
+            }else {
+                //没签到，签到
+                Update update = new Update().inc("points", 100);
+                MongoTemplateCatch.mongoTemplateTemp.findAndModify(query, update, Points.class);
+                return points1.getPoints()+100;
+            }
+        }else {
+            Points points = new Points(qq, 100,new Date().getTime());
+            MongoTemplateCatch.mongoTemplateTemp.insert(points);
+            return 100;
+        }
+    }
+
+    public int getLastNumber(String str) {
+        Pattern p = Pattern.compile("\\b\\d+$");
+        Matcher m = p.matcher(str);
+        if (m.find()) {
+            String lastNumberStr = m.group();
+            try {
+                return Integer.parseInt(lastNumberStr);
+            } catch (NumberFormatException e) {
+                return -1;
+            }
+        } else {
+            return -1;
         }
     }
 
