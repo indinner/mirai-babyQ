@@ -119,7 +119,7 @@ public class TwoClassServer {
     }
 
 
-    @Scheduled(fixedRate = 42000)
+    //1@Scheduled(fixedRate = 42000)
     public String showActivity() throws Exception {
         //构建查询参数
         JSONObject params=new JSONObject();

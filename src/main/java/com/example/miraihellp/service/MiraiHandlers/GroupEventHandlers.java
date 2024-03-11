@@ -8,21 +8,19 @@ import com.example.miraihellp.entity.Points;
 import com.example.miraihellp.server.catchServer.BabyQServerCatch;
 import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
-import com.example.miraihellp.server.catchServer.TwoClassCatch;
-import com.example.miraihellp.server.twoClass.TwoClassServer;
-import com.example.miraihellp.service.GPT;
 import com.example.miraihellp.service.SensitiveWordsFilter;
-import com.example.miraihellp.utils.CreateImgUtil;
-import io.github.asleepyfish.util.OpenAiUtils;
-import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
-import net.mamoe.mirai.contact.*;
+import net.mamoe.mirai.contact.Member;
+import net.mamoe.mirai.contact.MemberPermission;
+import net.mamoe.mirai.contact.NormalMember;
 import net.mamoe.mirai.event.EventHandler;
 import net.mamoe.mirai.event.SimpleListenerHost;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.event.events.MemberJoinEvent;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
-import net.mamoe.mirai.message.data.*;
+import net.mamoe.mirai.message.data.Image;
+import net.mamoe.mirai.message.data.MessageChain;
+import net.mamoe.mirai.message.data.MessageSource;
 import net.mamoe.mirai.utils.ExternalResource;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -30,11 +28,7 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.InputStream;
-import java.net.URL;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -358,11 +352,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
     }
 
 
-    public static void main(String[] args) {
-        List<String> stringList = GPT.GPT4.chatCompletion("你是什么东西"
-                , "123");
-        System.out.println(stringList.toString());
-    }
+
 
 
 }

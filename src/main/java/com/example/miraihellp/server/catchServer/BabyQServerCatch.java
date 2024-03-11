@@ -41,7 +41,7 @@ public class BabyQServerCatch {
     public void executeTask() {
         if(!babyQ.isOnline()){
             log.error("bot离线,重新登陆");
-            babyQ = MiraiServer.login(2270781775L);
+            babyQ = MiraiServer.login(1244018263);
         }else {
             log.info("bot当前状态正常");
         }
