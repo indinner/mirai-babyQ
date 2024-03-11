@@ -282,6 +282,13 @@ public class GroupEventHandlers extends SimpleListenerHost {
                     toImgApi("爱心",String.valueOf(qqNum),event);
                 }
                 break;
+            case "屏幕":
+                while(m.find()) {
+                    String qqNumStr = m.group();
+                    long qqNum = Long.parseLong(qqNumStr);
+                    toImgApi("屏幕",String.valueOf(qqNum),event);
+                }
+                break;
         }
     }
 
@@ -298,6 +305,10 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 break;
             case "爱心":
                 imageUrl="https://api.andeer.top/API/img_love.php?qq="+msg;
+                break;
+            case "屏幕":
+                imageUrl="https://api.andeer.top/API/img_screen.php?qq="+msg;
+                break;
         }
         // 创建临时文件
         File tempFile = File.createTempFile("temp", ".png");
@@ -350,8 +361,6 @@ public class GroupEventHandlers extends SimpleListenerHost {
             return -1;
         }
     }
-
-
 
 
 
