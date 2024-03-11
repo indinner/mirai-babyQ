@@ -262,12 +262,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 }
                 break;
             case "签到":
-                Integer state=addPoints(String.valueOf(event.getSender().getId()));
-                if(state!=-1){
-                    event.getGroup().sendMessage("签到成功,积分:"+state);
-                }else {
-                    event.getGroup().sendMessage("签到失败");
-                }
+                event.getSender().sendMessage("签你个头！");
                 break;
             case "悲报":
                 toImgApi("悲报",event.getMessage().contentToString().substring(2),event);
