@@ -304,6 +304,9 @@ public class GroupEventHandlers extends SimpleListenerHost {
             case "屏幕":
                 imageUrl="https://api.andeer.top/API/img_screen.php?qq="+msg;
                 break;
+            case "贴贴":
+                imageUrl="https://api.andeer.top/API/gif_tietie.php?qq="+msg;
+                break;
         }
         // 创建临时文件
         File tempFile = File.createTempFile("temp", ".png");
