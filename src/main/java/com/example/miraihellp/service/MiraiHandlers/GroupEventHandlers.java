@@ -1,6 +1,7 @@
 package com.example.miraihellp.service.MiraiHandlers;
 
 import cn.hutool.http.HttpUtil;
+import cn.hutool.json.JSONObject;
 import com.example.miraihellp.entity.BlackList;
 import com.example.miraihellp.entity.GroupSetting;
 import com.example.miraihellp.entity.KeyWord;
@@ -10,6 +11,7 @@ import com.example.miraihellp.server.catchServer.GroupServerCatch;
 import com.example.miraihellp.server.catchServer.MongoTemplateCatch;
 import com.example.miraihellp.service.SensitiveWordsFilter;
 import lombok.extern.log4j.Log4j2;
+import net.mamoe.mirai.contact.ContactList;
 import net.mamoe.mirai.contact.Member;
 import net.mamoe.mirai.contact.MemberPermission;
 import net.mamoe.mirai.contact.NormalMember;
@@ -184,6 +186,11 @@ public class GroupEventHandlers extends SimpleListenerHost {
             atList.add(qq);
         }
         switch (key){
+            /*case "1":
+                ContactList<NormalMember> members = event.getGroup().getMembers();
+                for (NormalMember member : members) {
+                    member.sendMessage("锦绣校区起航驾校直招,驾校位置安建大南门对面200米，距离合师5分钟车程，VIP特快班特惠价2310!!!,联系微信：520244（本号不回复）");
+                }*/
             case "踢":
                 atList.forEach(qq->{
                     event.getGroup().getMembers().get(qq).kick("违规");//踢人
@@ -284,7 +291,16 @@ public class GroupEventHandlers extends SimpleListenerHost {
                     toImgApi("屏幕",String.valueOf(qqNum),event);
                 }
                 break;
+            case "44":
+                event.getGroup().sendMessage(to4());
+                break;
         }
+    }
+
+    private String to4(){
+        String res = HttpUtil.get("https://api.andeer.top/API/kfc.php");
+        JSONObject jsonObject=new JSONObject(res);
+        return jsonObject.getStr("data");
     }
 
     /*发送喜报*/
