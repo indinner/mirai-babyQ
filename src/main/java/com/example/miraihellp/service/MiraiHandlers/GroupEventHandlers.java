@@ -54,7 +54,6 @@ public class GroupEventHandlers extends SimpleListenerHost {
      * 监听加群申请
      * @param event
      */
-    @EventHandler
     public void joinGroupRequest(MemberJoinRequestEvent event){
         if(!GroupServerCatch.groupSettingMap.containsKey(event.getGroupId())){
             return;
@@ -110,13 +109,16 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 //开启了关键词撤回功能
                 if(filter.containsSensitiveWords(event.getMessage().contentToString())){
                     MessageSource.recall(event.getMessage());
-                    if(black_list_number.containsKey(event.getSender().getId())){
-                        black_list_number.put(event.getSender().getId(),black_list_number.get(event.getSender().getId())+1);
-                    }else {
-                        black_list_number.put(event.getSender().getId(),1);
-                    }
-                    event.getSender().mute(60*black_list_number.get(event.getSender().getId())*black_list_number.get(event.getSender().getId()));
-                    event.getGroup().sendMessage(event.getSender().getId()+"消息违规，警告"+black_list_number.get(event.getSender().getId())+"次！");
+                    event.getSender().mute(60*60*24);
+                    event.getGroup().sendMessage(event.getSender().getId()+"消息违规！");
+                    BabyQServerCatch.babyQ.getFriend(520244L)
+                            .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
+                                    event.getMessage().contentToString()+" 已撤回");
+                }
+                if(filter.containsSensitiveWords(event.getSender().getNameCard())){
+                    MessageSource.recall(event.getMessage());
+                    event.getSender().mute(60*60*24);
+                    event.getGroup().sendMessage(event.getSender().getId()+"群昵称违规！");
                     BabyQServerCatch.babyQ.getFriend(520244L)
                             .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
                                     event.getMessage().contentToString()+" 已撤回");
