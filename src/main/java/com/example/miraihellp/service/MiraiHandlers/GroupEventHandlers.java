@@ -109,7 +109,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 //开启了关键词撤回功能
                 if(filter.containsSensitiveWords(event.getMessage().contentToString())){
                     MessageSource.recall(event.getMessage());
-                    event.getSender().mute(60*60*24);
+                    event.getSender().mute(60*10);
                     event.getGroup().sendMessage(event.getSender().getId()+"消息违规！");
                     BabyQServerCatch.babyQ.getFriend(520244L)
                             .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
@@ -117,7 +117,7 @@ public class GroupEventHandlers extends SimpleListenerHost {
                 }
                 if(filter.containsSensitiveWords(event.getSender().getNameCard())){
                     MessageSource.recall(event.getMessage());
-                    event.getSender().mute(60*60*24);
+                    event.getSender().mute(60*10);
                     event.getGroup().sendMessage(event.getSender().getId()+"群昵称违规！");
                     BabyQServerCatch.babyQ.getFriend(520244L)
                             .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
