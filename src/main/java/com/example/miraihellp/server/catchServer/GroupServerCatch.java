@@ -10,10 +10,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Author indinner
@@ -36,6 +33,9 @@ public class GroupServerCatch {
 
     //加载关键词
     public static List<String> keyWordList=new ArrayList<>();
+
+    //代课关键词
+    public static List<String> dkKeyWordList=new ArrayList<>(Arrays.asList("代","课","代课","dk"));
 
     //加载黑名单map，方便快速查找黑名单内容
     public static Map<Long,String> blackList=new HashMap<>();

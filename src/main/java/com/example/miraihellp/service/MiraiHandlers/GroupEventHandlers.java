@@ -103,6 +103,8 @@ public class GroupEventHandlers extends SimpleListenerHost {
             return;
         }
         SensitiveWordsFilter filter = new SensitiveWordsFilter(GroupServerCatch.keyWordList);
+        SensitiveWordsFilter filterdk = new SensitiveWordsFilter(GroupServerCatch.dkKeyWordList);
+
         if (GroupServerCatch.groupSettingMap.containsKey(event.getGroup().getId())) {
             GroupSetting groupSetting = GroupServerCatch.groupSettingMap.get(event.getGroup().getId());
             if(groupSetting.getKeyword()){
@@ -113,6 +115,10 @@ public class GroupEventHandlers extends SimpleListenerHost {
                     BabyQServerCatch.babyQ.getFriend(520244L)
                             .sendMessage(event.getGroup().getName()+" 的 "+event.getSender().getId()+" 的消息："+
                                     event.getMessage().contentToString()+" 已撤回");
+                    //首先判断是否有代课服务
+                    if(filterdk.containsSensitiveWords(event.getMessage().contentToString())){
+                        event.getSender().sendMessage("需要代课等服务，微信搜索小程序【跑跑乐】选择合肥师范学院 发布代课信息");
+                    }
                 }
                 if(filter.containsSensitiveWords(event.getSender().getNameCard())){
                     MessageSource.recall(event.getMessage());
